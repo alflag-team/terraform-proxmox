@@ -41,4 +41,9 @@ resource "proxmox_vm_qemu" "main" {
       }
     }
   }
+
+  network {
+    model  = var.model
+    bridge = var.bridge
+  }
 }

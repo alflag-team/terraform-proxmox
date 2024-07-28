@@ -53,7 +53,7 @@ variable "protection" {
 variable "boot" {
   description = "Boot order"
   type        = string
-  default = "order=scsi0"
+  default     = "order=scsi0"
 }
 
 variable "clone" {
@@ -157,4 +157,16 @@ variable "size" {
   description = "Disk size"
   type        = string
   default     = "16G"
+}
+
+variable "model" {
+  description = "Network model"
+  type        = string
+  default     = "virtio"
+}
+
+variable "bridge" {
+  description = "Network bridge"
+  type        = string
+  default     = "vmbr0"
 }

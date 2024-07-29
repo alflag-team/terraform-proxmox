@@ -10,16 +10,3 @@ module "minecraftproxy1001" {
   rootfs_storage = "Synology-01-LUN-01"
   nesting        = true
 }
-
-module "minecraft2001" {
-  source = "../../modules/vm"
-
-  name        = "minecraft2001"
-  target_node = "kitsune"
-  memory      = 8192
-  ipconfig0   = "gw=10.210.0.1,ip=10.210.30.1/24"
-  size        = "64G"
-
-  ciuser     = var.ciuser
-  cipassword = var.cipassword
-}

@@ -6,15 +6,15 @@ terraform {
     }
   }
 
-  # cloud {
-  #   organization = "alflag"
+  cloud {
+    organization = "alflag"
 
-  #   workspaces {
-  #     name = "minecraft"
-  #   }
-  # }
-
-  backend "local" {
-    path = "local.tfstate"
+    workspaces {
+      name = "minecraft"
+    }
   }
+
+  # backend "local" {
+  #   path = "local.tfstate"
+  # }
 }

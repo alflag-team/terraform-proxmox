@@ -54,7 +54,6 @@ module "minecraft1006" {
   name        = "minecraft1006"
   target_node = "kitsune"
   memory      = 8192
-  boot        = "order=scsi0"
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.6/24,gw=10.210.0.1"
   storage     = "local-lvm"

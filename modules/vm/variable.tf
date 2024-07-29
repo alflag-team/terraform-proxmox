@@ -124,13 +124,13 @@ variable "cipassword" {
 variable "searchdomain" {
   description = "Search domain"
   type        = string
-  default     = "alflag.internal"
+  default     = null
 }
 
 variable "nameserver" {
   description = "Name server"
   type        = string
-  default     = "127.0.0.1"
+  default     = null
 }
 
 variable "sshkeys" {

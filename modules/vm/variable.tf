@@ -105,6 +105,12 @@ variable "automatic_reboot" {
   default     = true
 }
 
+variable "cicustom" {
+  description = "Cloud-init custom"
+  type        = string
+  default     = null
+}
+
 variable "ciuser" {
   description = "Cloud-init user"
   type        = string

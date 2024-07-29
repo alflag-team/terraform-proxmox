@@ -17,6 +17,7 @@ resource "proxmox_vm_qemu" "main" {
   scsihw           = var.scsihw
   os_type          = var.os_type
   automatic_reboot = var.automatic_reboot
+  cicustom         = var.cicustom
   ciuser           = var.ciuser
   cipassword       = var.cipassword
   searchdomain     = var.searchdomain

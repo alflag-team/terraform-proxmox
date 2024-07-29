@@ -1,16 +1,3 @@
-module "minecraftpanel1001" {
-  source = "../../modules/lxc"
-
-  hostname       = "minecraftpanel1001"
-  target_node    = "kitsune"
-  memory         = 2048
-  swap           = 8192
-  network_ip     = "10.210.30.111/24"
-  rootfs_size    = "16G"
-  rootfs_storage = "Synology-01-LUN-01"
-  nesting        = true
-}
-
 module "minecraftproxy1001" {
   source = "../../modules/lxc"
 

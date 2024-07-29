@@ -58,7 +58,7 @@ module "minecraft1006" {
   ipconfig0   = "ip=10.210.30.6/24,gw=10.210.0.1"
   storage     = "local-lvm"
   cores       = 4
-  size        = "128G"
+  size        = "126G"
   vmid        = 110
   full_clone  = false
   ciuser      = var.ciuser

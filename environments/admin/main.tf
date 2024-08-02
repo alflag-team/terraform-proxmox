@@ -1,19 +1,17 @@
-module "admin1002" {
+module "admin1001" {
   source = "../../modules/vm"
 
-  name        = "admin1002"
-  description = "admin1002"
-
-  node_name = "kitsune"
-
-  cpu_cores = 2
-
-  disk_datastore_id = "hdd-01"
-  disk_file_id      = var.disk_file_id
-  disk_size         = 32
-
-  ipv4_address = "10.210.6.2/24"
-  ipv4_gateway = "10.210.0.1"
-
-  memory_dedicated = 2048
+  name        = "admin1001"
+  target_node = "kitsune"
+  memory      = 1024 * 2
+  startup     = "order=3,up=60,down=60"
+  ipconfig0   = "ip=10.210.6.1/24,gw=10.210.0.1"
+  storage     = "hdd-01"
+  cores       = 2
+  size        = "32G"
+  vmid        = 102
+  full_clone  = false
+  cicustom    = "user=local:snippets/user-data.yaml"
+  ciuser      = var.ciuser
+  cipassword  = var.cipassword
 }

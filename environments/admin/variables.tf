@@ -1,19 +1,21 @@
-variable "endpoint" {
-  type    = string
-  default = "https://10.210.1.1:8006/"
+variable "proxmox_api_url" {
+  type = string
 }
 
-# variable "username" {
-#   type      = string
-#   sensitive = true
-# }
+variable "proxmox_user" {
+  type = string
+}
 
-# variable "password" {
-#   type      = string
-#   sensitive = true
-# }
+variable "proxmox_password" {
+  type = string
+}
 
-variable "disk_file_id" {
-  type    = string
-  default = "hdd-01:iso/jammy-server-cloudimg-amd64.img"
+variable "ciuser" {
+  type      = string
+  sensitive = true
+}
+
+variable "cipassword" {
+  type      = string
+  sensitive = true
 }

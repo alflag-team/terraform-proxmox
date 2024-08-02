@@ -3,7 +3,7 @@
 ## デプロイ方法
 
 ```shell
-cd <env>/
+cd environments/$ENVIRONMENT
 terraform init
 terraform apply
 ```

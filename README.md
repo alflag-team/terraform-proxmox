@@ -59,5 +59,5 @@ output:
 以下のコマンドでドキュメントを生成できます。
 
 ```bash
-terraform-docs modules/<module>/
+terraform-docs modules/$MODULE
 ```

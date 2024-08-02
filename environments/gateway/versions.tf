@@ -13,4 +13,8 @@ terraform {
       name = "gateway"
     }
   }
+
+  # backend "local" {
+  #   path = "local.tfstate"
+  # }
 }

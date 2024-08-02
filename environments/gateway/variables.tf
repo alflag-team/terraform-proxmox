@@ -9,3 +9,13 @@ variable "proxmox_user" {
 variable "proxmox_password" {
   type = string
 }
+
+variable "ciuser" {
+  type      = string
+  sensitive = true
+}
+
+variable "cipassword" {
+  type      = string
+  sensitive = true
+}

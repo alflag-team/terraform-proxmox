@@ -2,7 +2,7 @@ terraform {
   required_providers {
     proxmox = {
       source  = "telmate/proxmox"
-      version = ">=2.9.0"
+      version = "3.0.1-rc3"
     }
   }
 
@@ -13,4 +13,8 @@ terraform {
       name = "database"
     }
   }
+
+  # backend "local" {
+  #   path = "local.tfstate"
+  # }
 }

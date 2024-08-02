@@ -1,16 +1,17 @@
-module "qemu" {
-  source = "../../modules/qemu"
+module "database1003" {
+  source = "../../modules/vm"
 
-  name         = "database1003"
-  target_node  = "kitsune"
-  vmid         = 0
-  clone        = "ubuntu-server-22.04"
-  cores        = 2
-  sockets      = 1
-  memory       = 2048
-  os_type      = "cloud-init"
-  disk_type    = "scsi"
-  disk_storage = "local-lvm"
-  disk_size    = "32G"
-  ipconfig0    = "ip=10.210.4.3/24,gw=10.210.0.1"
+  name        = "database1003"
+  target_node = "kitsune"
+  memory      = 1024*2
+  startup     = "order=1,up=60,down=60"
+  ipconfig0   = "ip=10.210.4.3/24,gw=10.210.0.1"
+  storage     = "local-lvm"
+  cores       = 2
+  size        = "32G"
+  vmid        = 100
+  full_clone  = false
+  cicustom    = "user=local:snippets/user-data.yaml"
+  ciuser      = var.ciuser
+  cipassword  = var.cipassword
 }

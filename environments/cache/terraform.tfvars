@@ -1,1 +1,1 @@
-../../secrets/terraform.tfvars
+../../../secrets/terraform.tfvars

@@ -1,13 +1,17 @@
 module "minecraftpanel1001" {
-  source = "../../modules/lxc"
+  source = "../../modules/vm"
 
-  hostname       = "minecraftpanel1001"
-  target_node    = "kitsune"
-  memory         = 2048
-  swap           = 8192
-  network_ip     = "10.210.30.31/24"
-  rootfs_size    = "20G"
-  rootfs_storage = "Synology-01-LUN-01"
+  name        = "minecraftpanel1001"
+  target_node = "kitsune"
+  desc        = "minecraft panel"
+  memory      = 2048
+  startup     = "order=5,up=60,down=60"
+  ipconfig0   = "ip=10.210.30.31/24,gw=10.210.0.1"
+  storage     = "Synology-01-LUN-01"
+  cores       = 2
+  size        = "20G"
+  ciuser      = var.ciuser
+  cipassword  = var.cipassword
 }
 
 module "minecraftproxy1001" {

@@ -11,29 +11,12 @@ module "minecraftproxy1001" {
   nesting        = true
 }
 
-module "minecraft1004" {
-  source = "../../modules/vm"
-
-  name        = "minecraft1004"
-  target_node = "kitsune"
-  memory      = 8192
-  startup     = "order=5,up=60,down=60"
-  ipconfig0   = "ip=10.210.30.4/24,gw=10.210.0.1"
-  storage     = "local-lvm"
-  cores       = 4
-  size        = "128G"
-  vmid        = 103
-  full_clone  = false
-  cicustom    = "user=local:snippets/user-data.yaml"
-  ciuser      = var.ciuser
-  cipassword  = var.cipassword
-}
-
 module "minecraft1005" {
   source = "../../modules/vm"
 
   name        = "minecraft1005"
   target_node = "kitsune"
+  desc        = "backend-res-1"
   memory      = 8192
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.5/24,gw=10.210.0.1"
@@ -53,6 +36,7 @@ module "minecraft1006" {
 
   name        = "minecraft1006"
   target_node = "kitsune"
+  desc        = "backend-vanilla-1"
   memory      = 8192
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.6/24,gw=10.210.0.1"

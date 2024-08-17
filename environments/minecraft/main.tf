@@ -9,7 +9,7 @@ module "minecraftpanel1001" {
   ipconfig0   = "ip=10.210.30.31/24,gw=10.210.0.1"
   storage     = "Synology-01-LUN-01"
   cores       = 2
-  size        = "20G"
+  size        = "40G"
   ciuser      = var.ciuser
   cipassword  = var.cipassword
 }

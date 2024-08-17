@@ -1,6 +1,7 @@
 resource "proxmox_lxc" "main" {
   target_node     = var.target_node
   hostname        = var.hostname
+  description     = var.description
   ostemplate      = var.ostemplate
   memory          = var.memory
   unprivileged    = var.unprivileged

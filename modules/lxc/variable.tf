@@ -6,6 +6,11 @@ variable "target_node" {
   type = string
 }
 
+variable "description" {
+  type    = string
+  default = "Managed by Terraform"
+}
+
 variable "onboot" {
   type    = bool
   default = true

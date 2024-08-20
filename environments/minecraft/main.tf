@@ -27,6 +27,22 @@ module "minecraftproxy1001" {
   nesting        = true
 }
 
+module "minecraft1001" {
+  source = "../../modules/vm"
+
+  name        = "minecraft1001"
+  target_node = "kitsune"
+  desc        = "ptero"
+  memory      = 8192
+  startup     = "order=5,up=60,down=60"
+  ipconfig0   = "ip=10.210.30.1/24,gw=10.210.0.1"
+  storage     = "local-lvm"
+  cores       = 4
+  size        = "100G"
+  ciuser      = var.ciuser
+  cipassword  = var.cipassword
+}
+
 module "minecraft1005" {
   source = "../../modules/vm"
 

@@ -18,7 +18,7 @@ module "wiki1001" {
   target_node = "kitsune"
   memory      = 1024 * 2
   swap        = 1024 * 8
-  network_ip  = "10.210.11.10/24"
+  network_ip  = "10.210.11.11/24"
   rootfs_size    = "30G"
   rootfs_storage = "Synology-01-LUN-01"
   nesting     = true

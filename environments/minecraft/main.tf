@@ -43,6 +43,22 @@ module "minecraft1001" {
   cipassword  = var.cipassword
 }
 
+module "minecraft1002" {
+  source = "../../modules/vm"
+
+  name        = "minecraft1002"
+  target_node = "kitsune"
+  desc        = "ptero"
+  memory      = 12288
+  startup     = "order=5,up=60,down=60"
+  ipconfig0   = "ip=10.210.30.2/24,gw=10.210.0.1"
+  storage     = "local-lvm"
+  cores       = 4
+  size        = "200G"
+  ciuser      = var.ciuser
+  cipassword  = var.cipassword
+}
+
 module "minecraft1005" {
   source = "../../modules/vm"
 

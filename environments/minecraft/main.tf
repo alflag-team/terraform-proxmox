@@ -33,12 +33,12 @@ module "minecraft1001" {
   name        = "minecraft1001"
   target_node = "kitsune"
   desc        = "ptero"
-  memory      = 8192
+  memory      = 4096
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.1/24,gw=10.210.0.1"
   storage     = "local-lvm"
   cores       = 4
-  size        = "40G"
+  size        = "50G"
   ciuser      = var.ciuser
   cipassword  = var.cipassword
 }

@@ -4,7 +4,7 @@ module "minecraftpanel1001" {
   name        = "minecraftpanel1001"
   target_node = "kitsune"
   desc        = "minecraft panel"
-  memory      = 2048
+  memory      = 1024*2
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.31/24,gw=10.210.0.1"
   storage     = "Synology-01-LUN-01"
@@ -33,7 +33,7 @@ module "minecraft1001" {
   name        = "minecraft1001"
   target_node = "kitsune"
   desc        = "ptero"
-  memory      = 4096
+  memory      = 1024*4
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.1/24,gw=10.210.0.1"
   storage     = "local-lvm"
@@ -49,7 +49,7 @@ module "minecraft1002" {
   name        = "minecraft1002"
   target_node = "kitsune"
   desc        = "ptero"
-  memory      = 12288
+  memory      = 1024*12
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.2/24,gw=10.210.0.1"
   storage     = "local-lvm"
@@ -65,7 +65,7 @@ module "minecraft1005" {
   name        = "minecraft1005"
   target_node = "kitsune"
   desc        = "backend-res-1"
-  memory      = 8192
+  memory      = 1024*8
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.5/24,gw=10.210.0.1"
   storage     = "Synology-01-LUN-01"
@@ -85,7 +85,7 @@ module "minecraft1006" {
   name        = "minecraft1006"
   target_node = "kitsune"
   desc        = "backend-vanilla-1"
-  memory      = 8192
+  memory      = 1024*8
   startup     = "order=5,up=60,down=60"
   ipconfig0   = "ip=10.210.30.6/24,gw=10.210.0.1"
   storage     = "local-lvm"
